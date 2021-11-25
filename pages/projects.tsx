@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 const Projects: NextPage = () => {
     return (
-        <div className='h-48 flex flex-wrap content-start gap-10'>
+        <div className='p-10 flex flex-wrap h-screen w-screen content-start justify-center items-center gap-10'>
             <a className='rounded-xl hover:shadow-xl' href='https://github.com/KJ002/Portfolio'>
                 <Image className="rounded-xl" width="400" height="200" src="https://opengraph.githubassets.com/f46d3d21c0c43e565e27e314eb51c91b17f78342c1c4de976401d50a39d1a674/KJ002/Portfolio"></Image>
             </a>
