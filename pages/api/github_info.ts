@@ -14,8 +14,6 @@ export default function handler(
     fetch('https://api.github.com/users/KJ002')
       .then(value => value.json())
       .then(data => cache = data);
-
-    console.log(Date.now())
   }
 
   res.status(200).json(cache)
