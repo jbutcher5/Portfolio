@@ -2,7 +2,8 @@ import { data } from 'autoprefixer';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import type { AppProps } from 'next/app'
 
 export const getStaticProps = async () => {
 
@@ -16,7 +17,9 @@ export const getStaticProps = async () => {
 
 }
 
-const Home: NextPage = ({GithubInfo}) => {
+const Home: NextPage = ({ GithubInfo }: any) => {
+
+  console.log(typeof GithubInfo);
 
   let githubProfile = 'https://github.com/'+GithubInfo["login"];
   let profilePicture = 'https://avatars.githubusercontent.com/u/'+GithubInfo["id"].toString()+'?s=64&v=4';
@@ -29,9 +32,9 @@ const Home: NextPage = ({GithubInfo}) => {
         </a>
         <div className="text-xl font-medium text-nord1">{GithubInfo["name"]}</div>
         <p className="text-gray-500">{GithubInfo["bio"]}</p>
-        <a href="/projects">
+        <Link href="/projects">
           <button className='p-1 ring-nord9 hover:ring bg-nord10 rounded text-nord4'>Projects</button>
-        </a>
+        </Link>
       </div>
     </div>
   )
