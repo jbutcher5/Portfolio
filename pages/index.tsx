@@ -19,8 +19,6 @@ export const getStaticProps = async () => {
 
 const Home: NextPage = ({ GithubInfo }: any) => {
 
-  console.log(typeof GithubInfo);
-
   let githubProfile = 'https://github.com/'+GithubInfo["login"];
   let profilePicture = 'https://avatars.githubusercontent.com/u/'+GithubInfo["id"].toString()+'?s=64&v=4';
 
