@@ -3,11 +3,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@sls-next/aws-cloudfront": "^3.7.0-alpha.0",
+    "@sls-next/aws-lambda": "^3.7.0-alpha.0",
+    "@sls-next/aws-sqs": "^3.7.0-alpha.0",
     "autoprefixer": "^10.4.0",
     "next": "12.0.4",
     "octokit": "^1.7.1",
