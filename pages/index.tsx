@@ -6,15 +6,12 @@ import Link from 'next/link'
 import type { AppProps } from 'next/app'
 
 export const getStaticProps = async () => {
-
   const response = await fetch('https://api.github.com/users/KJ002')
   const data = await response.json();
 
-  
   return {
     props: { GithubInfo: data }
   };
-
 }
 
 const Home: NextPage = ({ GithubInfo }: any) => {
