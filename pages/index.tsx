@@ -26,9 +26,11 @@ const Home: NextPage = ({ GithubInfo }: any) => {
       </Head>
       <div className="grid place-items-center h-screen">
         <div className="p-6 max-w-sm mx-auto bg-nord5 rounded-xl shadow-md space-x-4 h-48 ring ring-nord9">
-          <Link href={githubProfile}>
-            <Image className='fixed top-1 rounded-full' width='64' height='64' src={profilePicture}></Image>
-          </Link>
+          <div className='ring-nord9 hover:ring top-1 rounded-full w-16 h-16'>
+            <Link href={githubProfile}>
+              <Image className='fixed rounded-full' width='64' height='64' src={profilePicture}></Image>
+            </Link>
+          </div>
           <div className="text-xl font-medium text-nord1">{GithubInfo["name"]}</div>
           <p className="text-gray-500">{GithubInfo["bio"]}</p>
           <Link href="/projects">
