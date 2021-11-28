@@ -30,8 +30,13 @@ function generateProjectHtml(name: string){
 
 const Projects: NextPage = () => {
     return (
-        <div className='p-10 flex flex-wrap h-screen w-screen content-start justify-center items-center gap-10'>
-            {viewProjects.map(projectName => generateProjectHtml(projectName))}
+        <div>
+            <Head>
+            <title>Projects</title>
+            </Head>
+            <div className='p-10 flex flex-wrap h-screen w-screen content-start justify-center items-center gap-10'>
+                {viewProjects.map(projectName => generateProjectHtml(projectName))}
+            </div>
         </div>
     )
 }
