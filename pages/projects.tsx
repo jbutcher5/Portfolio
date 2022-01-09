@@ -9,6 +9,7 @@ const viewProjects = [
     "Tetris",
     "Muon",
     "read-yaml",
+    "anagram_solver",
     "MicroClock",
     "MathEvaluator",
     "Raymarching",
