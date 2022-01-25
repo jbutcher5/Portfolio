@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 const viewProjects = [
     "Portfolio",
+    "simple_status",
     "Tetris",
     "Muon",
     "read-yaml",
