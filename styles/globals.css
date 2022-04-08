@@ -20,5 +20,5 @@ a {
 }
 
 body {
-  @apply bg-nord0;
+  @apply bg-background;
 }

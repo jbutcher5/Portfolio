@@ -27,16 +27,16 @@ const Home: NextPage = ({ GithubInfo }: any) => {
         <link rel="icon" href="/icon1.png" />
       </Head>
       <div className="grid place-items-center h-screen">
-        <div className="p-6 max-w-sm mx-auto bg-nord5 rounded-xl shadow-md space-x-4 h-48 ring ring-nord9">
-          <div className='ring-nord9 hover:ring top-1 rounded-full w-16 h-16'>
+        <div className="p-6 max-w-sm mx-auto bg-pisswhite rounded-xl shadow-md space-x-4 h-48 ring ring-lime">
+          <div className='ring-lime hover:ring top-1 rounded-full w-16 h-16'>
             <Link href={githubProfile}>
-              <Image className='fixed rounded-full' width='64' height='64' src={profilePicture}></Image>
+              <Image className='fixed rounded-full' width='64' height='64' src={profilePicture} priority></Image>
             </Link>
           </div>
-          <div className="text-xl font-medium text-nord1">{GithubInfo["name"]}</div>
+          <div className="text-xl font-medium text-black">{GithubInfo["name"]}</div>
           <p className="text-gray-500">{GithubInfo["bio"]}</p>
           <Link href="/projects">
-            <button className='p-1 ring-nord9 hover:ring bg-nord10 rounded text-nord4'>Projects</button>
+            <button className='p-1 ring-lime hover:ring bg-darkgreen rounded text-white'>Projects</button>
           </Link>
         </div>
       </div>
