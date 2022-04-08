@@ -43,7 +43,7 @@ const Projects: NextPage = () => {
             <title>Projects</title>
             <link rel="icon" href="/icon1.png" />
             </Head>
-            <div className='p-10 flex flex-wrap h-screen w-screen content-start justify-center items-center gap-10'>
+            <div className='p-10 flex flex-wrap h-full w-full content-start justify-center items-center gap-10'>
                 {viewProjects.map(projectName => generateProjectHtml(projectName))}
             </div>
         </div>
