@@ -31,7 +31,7 @@ function generateProjectHtml(name: string){
 
     return (
         <Link href={link} key={name}>
-            <Image className="rounded-md" width="400" height="200" src={image}></Image>
+            <Image className="rounded-md cursor-pointer" width="400" height="200" src={image}></Image>
         </Link>
     )
 }
@@ -43,7 +43,7 @@ const Projects: NextPage = () => {
             <title>Projects</title>
             <link rel="icon" href="/icon1.png" />
             </Head>
-            <div className='p-10 flex flex-wrap h-screen w-screen content-start justify-center items-center gap-10'>
+            <div className='p-10 flex flex-wrap h-full w-full content-start justify-center items-center gap-10'>
                 {viewProjects.map(projectName => generateProjectHtml(projectName))}
             </div>
         </div>
