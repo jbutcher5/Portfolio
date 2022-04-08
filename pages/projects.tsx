@@ -5,22 +5,28 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
 const viewProjects = [
-    "Portfolio",
-    "simple_status",
-    "Tetris",
-    "Muon",
-    "read-yaml",
-    "anagram_solver",
-    "MicroClock",
-    "MathEvaluator",
-    "Raymarching",
-    "Pong",
-    "Thunder",
-    "Neo"
+    "Wlanguage/core",
+    "KJ002/Boids",
+    "KJ002/read-yaml",
+    "Wlanguage/wi",
+    "KJ002/simple_status",
+    "KJ002/Tetris",
+    "KJ002/ghstat",
+    "KJ002/quick_file",
+    "Wlanguage/python-core",
+    "KJ002/Portfolio",
+    "KJ002/Muon",
+    "KJ002/anagram_solver",
+    "KJ002/MicroClock",
+    "KJ002/MathEvaluator",
+    "KJ002/Raymarching",
+    "KJ002/Pong",
+    "KJ002/Thunder",
+    "KJ002/Neo"
 ];
 
 function generateProjectHtml(name: string){
-    const link: string = "https://github.com/KJ002/"+name;
+    const link: string = "https://github.com/"+name;
     const image: string = "https://opengraph.githubassets.com/f46d3d21c0c43e565e27e314eb51c91b17f78342c1c4de976401d50a39d1a674/KJ002/"+name;
 
     return (
