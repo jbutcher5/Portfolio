@@ -23,6 +23,7 @@ const Home: NextPage = ({ GithubInfo }: any) => {
     <div>
       <Head>
         <title>Home</title>
+        <link rel="icon" href="/icon1.png" />
       </Head>
       <div className="grid place-items-center h-screen">
         <div className="p-6 max-w-sm mx-auto bg-nord5 rounded-xl shadow-md space-x-4 h-48 ring ring-nord9">
