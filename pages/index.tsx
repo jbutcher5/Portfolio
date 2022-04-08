@@ -10,7 +10,8 @@ export const getStaticProps = async () => {
   const data = await response.json();
 
   return {
-    props: { GithubInfo: data }
+    props: { GithubInfo: data},
+    revalidate: 21600,
   };
 }
 
