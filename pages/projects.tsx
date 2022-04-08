@@ -30,7 +30,7 @@ function generateProjectHtml(name: string){
     const image: string = "https://opengraph.githubassets.com/f46d3d21c0c43e565e27e314eb51c91b17f78342c1c4de976401d50a39d1a674/"+name;
 
     return (
-        <Link href={link}>
+        <Link href={link} key={name}>
             <Image className="rounded-md" width="400" height="200" src={image}></Image>
         </Link>
     )
