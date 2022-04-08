@@ -30,7 +30,7 @@ const Home: NextPage = ({ GithubInfo }: any) => {
         <div className="p-6 max-w-sm mx-auto bg-pisswhite rounded-xl shadow-md space-x-4 h-48 ring ring-lime">
           <div className='ring-lime hover:ring top-1 rounded-full w-16 h-16'>
             <Link href={githubProfile}>
-              <Image className='fixed rounded-full' width='64' height='64' src={profilePicture} priority></Image>
+              <Image className='fixed rounded-full cursor-pointer' width='64' height='64' src={profilePicture} priority></Image>
             </Link>
           </div>
           <div className="text-xl font-medium text-black">{GithubInfo["name"]}</div>
