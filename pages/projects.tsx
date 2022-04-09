@@ -31,7 +31,7 @@ function generateProjectHtml(name: string){
 
     return (
         <Link href={link} key={name}>
-            <Image className="rounded-md cursor-pointer" width="400" height="200" src={image}></Image>
+            <Image className="rounded-md cursor-pointer" width="400" height="200" src={image} alt={name}></Image>
         </Link>
     )
 }
