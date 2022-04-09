@@ -18,6 +18,7 @@ export const getStaticProps = async () => {
 const Home: NextPage = ({ GithubInfo }: any) => {
 
   const githubProfile = 'https://github.com/'+GithubInfo["login"];
+  const profileAlt = GithubInfo["login"] + "'s GitHub Profile";
   const profilePicture = 'https://avatars.githubusercontent.com/u/'+GithubInfo["id"].toString()+'?s=64&v=4';
 
   return (
@@ -29,13 +30,13 @@ const Home: NextPage = ({ GithubInfo }: any) => {
       <div className="grid place-items-center h-screen">
         <div className="p-6 max-w-sm mx-auto bg-pisswhite rounded-xl shadow-md space-x-4 h-48 ring ring-lime">
           <div className='ring-lime hover:ring top-1 rounded-lg w-16 h-16'>
-            <Link href={githubProfile}>
-              <Image className='fixed cursor-pointer rounded-lg' width='64' height='64' src={profilePicture} priority></Image>
+            <Link href={githubProfile} passHref>
+              <Image className='cursor-pointer rounded-lg' width='64' height='64' alt={profileAlt} src={profilePicture} priority></Image>
             </Link>
           </div>
           <div className="text-xl font-medium text-black">{GithubInfo["name"]}</div>
           <p className="text-gray-500">{GithubInfo["bio"]}</p>
-          <Link href="/projects">
+          <Link href="/projects" passHref>
             <button className='p-1 ring-lime hover:ring bg-darkgreen rounded text-white'>Projects</button>
           </Link>
         </div>
