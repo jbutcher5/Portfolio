@@ -28,17 +28,22 @@ const Home: NextPage = ({ GithubInfo }: any) => {
         <link rel="icon" href="/icon1.png" />
       </Head>
       <div className="grid place-items-center h-screen">
-        <div className="p-6 max-w-sm mx-auto bg-pisswhite rounded-xl shadow-md space-x-4 h-48 ring ring-lime">
-          <div className='ring-lime hover:ring top-1 rounded-lg w-16 h-16'>
-            <Link href={githubProfile} passHref>
-              <Image className='cursor-pointer rounded-lg' width='64' height='64' alt={profileAlt} src={profilePicture} priority></Image>
+        <div className="p-6 max-w-sm mx-auto bg-pisswhite rounded-xl shadow-md space-x-4">
+          <div className="grid place-content-around">
+            <div className='hover:drop-shadow-xl top-1 rounded-lg w-16 h-16'>
+              <Link href={githubProfile} passHref>
+                <Image className='cursor-pointer rounded-lg fixed' width='64' height='64' alt={profileAlt} src={profilePicture} priority></Image>
+              </Link>
+            </div>
+
+            <p className="text-xl underline decoration-wavy font-medium text-black">{GithubInfo["name"]}</p>
+
+            <p className="text-gray-500">{GithubInfo["bio"]}</p>
+
+            <Link href="/projects" passHref>
+              <button className='mt-4 p-1 shadow shadow-2xl bg-darkgreen rounded text-white'>Projects</button>
             </Link>
           </div>
-          <div className="text-xl font-medium text-black">{GithubInfo["name"]}</div>
-          <p className="text-gray-500">{GithubInfo["bio"]}</p>
-          <Link href="/projects" passHref>
-            <button className='p-1 ring-lime hover:ring bg-darkgreen rounded text-white'>Projects</button>
-          </Link>
         </div>
       </div>
     </div>
